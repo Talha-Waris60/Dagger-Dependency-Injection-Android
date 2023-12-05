@@ -31,6 +31,23 @@ class Car {
     }  
 }`     
 The service locator pattern is different from dependency injection in the way the dependencies are consumed. In service locator pattern, classes have control and ask for objects to be injected, While in dependency injection, the app has control and proactively injects the required objects.
+### Dagger
+Dagger is a popular dependency injection library for Java, Kotlin, and Android that is maintained by Google. Dagger use DI to manage and create the dependencies of graph for you. Dagger automatically generates code that mimics tha code you have written with hands. Because the code is generated at compile time, it's traceable and more performant than other reflection-based solutions.
+#### Benefits of dagger
+##### 1) Generating the AppContainer code that you manually implemented in the manual DI.
+##### 2) Create factories for the classes available in application class.
+##### 3) Deciding whether to reuse a dependency or create a new instance through the use of scopes
+##### 4) Creating containers for specific flows e.g you have login flow that require dependencies for login dagger create a container and constructs the dependencies inside this container and provides you on demand. 
+
+
+
+
+
+
+
+
+
+
 
 
 
