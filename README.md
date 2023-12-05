@@ -18,7 +18,7 @@ They fit into two categories
 ##### 1) Reflection-based solutions that connect dependencies at runtime.
 ##### 2) Static solutions that generate the code to connect dependencies at compile time.
 ### Alternatives to dependency injection
-An alternative to dependency injection is using a service locator. The service locator reduce the tight connection between classes and their specific dependencies. We create a class known as the service locator that creates and stores dependencies and then provides those dependencies on demand.  
+An alternative to dependency injection is using a service locator. The service locator reduce the tight connection between classes and their specific dependencies. We create a class known as the service locator that creates and stores dependencies and then provides those dependencies on demand.   
 `object ServiceLocator {  
      // Store the dependency  
     fun getEngine(): Engine = Engine()  
@@ -29,7 +29,7 @@ class Car {
     fun start() {  
         engine.start()  
     }  
-}`    
+}`     
 The service locator pattern is different from dependency injection in the way the dependencies are consumed. In service locator pattern, classes have control and ask for objects to be injected, While in dependency injection, the app has control and proactively injects the required objects.
 
 
