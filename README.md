@@ -38,7 +38,11 @@ Dagger is a popular dependency injection library for Java, Kotlin, and Android t
 ##### 2) Create factories for the classes available in application class.
 ##### 3) Deciding whether to reuse a dependency or create a new instance through the use of scopes
 ##### 4) Creating containers for specific flows e.g you have login flow that require dependencies for login dagger create a container and constructs the dependencies inside this container and provides you on demand. 
-
+Dagger automatically does all of this at build or compile time as long as you declare dependencies of a class and generate code that you would have written manually. By putting `@inject` annonatation to class constructor Dagger knows how to create the instance of class.
+### Dagger Components
+Dagger creates a dependency graph for your project, helping it to determine where to obtain dependencies when they are needed for injection. To set this up, create an interface and annotate it with `@Component`. This tells Dagger to generate a container with all the required dependencies, forming a graph of objects. Inside this container, you define functions that return instances of the classes you need.
+### Scoping with Dagger
+We can use scope annotations to control the lifetime of an object with the lifetime of its associated component. This means that the same instance of a dependency is used every time when any class of that type requested.
 
 
 
