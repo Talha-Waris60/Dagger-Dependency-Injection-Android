@@ -9,11 +9,11 @@ import dagger.Provides
 import javax.inject.Named
 
 @Module
-class NotificationServiceModule {
+class NotificationServiceModule(private val retryCount: Int) {
 
     @Provides
     fun getMessageService() : NotificationService {
-        return MessageService()
+        return MessageService(retryCount)
     }
 
     // Dagger knows how to create their object
